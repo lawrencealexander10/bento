@@ -36,7 +36,6 @@ gem 'angularjs-rails'
 #images
 # gem 'carrierwave'
 # gem "fog-aws"
-gem 'nifty-attachments'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

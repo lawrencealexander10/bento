@@ -1,6 +1,6 @@
 *{
   font-family: 'Avenir', sans-serif; 
-  font-weight:200;
+  font-weight:400;
 }
 .site-color{
 	background-color: #f2f2f2;
@@ -20,7 +20,6 @@
 	p{
 		text-align: left; 
 		color: white; 
-		font-weight:400;
 		margin-bottom: 10px;
 	}
 
@@ -50,37 +49,37 @@
 
 .wrap-nav{
 	z-index: 100;
-	// position: fixed;
 	width: 100%;
 	background-color: white;
-
+	
+	.basket{
+		font-weight: 900; 
+		color: #cccccc; 
+		font-size: 15px;
+	}
 	.logo-title{
-		top: 5px;
+		top: 15px;
+		display: inline-block;
     	position: relative;
 		color: #61dff0;
-		font-weight: 600;
+		font-weight: 900;
 		font-family: 'Avenir', sans-serif;
-		font-size: 30px;
+		font-size: 25px;
 		text-decoration: none;
 	}
 
 	.mainNavCart-itemQty{
-	    line-height: 20px;
-	    font-size: 13px;
-	    width: 20px;
-	    height: 20px;
-	    position: absolute;
+	    font-size: 15px;
+	    font-weight: 900;
+	    position: relative;
+	    display: block;
 	    text-align: center;
-	    // background-color: #FFCE64;
-	    background-color: #f63440;
-	    color: #fff;
-	    border-radius: 20px;
-	    bottom: 5px;
-	    left: 35px;
+	    color: #61dff0;
   	}
 
   	.cart{
-  		padding-top: 5px;
+  		padding-top: 11px;
+  		padding-bottom: 11px;
   	}
 }
 
@@ -96,30 +95,29 @@
 		background-color: white;
 		display: inline-block;
 		margin: 30px 15px;
+		p{
+			font-size: 15px;
+			margin:30px;
+		}
 	}
 
 	.preview-pane{
-		// height: 200px;
+		height: 150px;
 		background-size: cover; 
 		td{
 			border:none;
 			text-align: center;
 		}
 	}
-	.bottom-pane{
-	// overflow-y: scroll;
- //    position: absolute;
- //    height: 100%;
-	}
 	.headline-name{
-		font-size: 1.25em;
+		font-size: 25px;
 		font-weight: 900;
+		padding-top: 20px;
 	}
 	.preview-info{
-		padding-top: 40px;
 		color:white;
 		.table-pane{
-			padding-top: 100px;
+			padding-top: 36.25px;
 		}
 		table{
 			margin-bottom: 0px;
@@ -130,7 +128,7 @@
 		}
 		td{
 			padding-top: 0px;
-			font-weight: bold;
+			font-weight: 900;
 		}
 	}
 	.popup-wrapper{
@@ -139,7 +137,7 @@
     	width: 100%;
     	a{
     		color: white;
-    		font-weight: bold;
+    		font-weight: 900;
     		text-decoration: none;
     	}
     	.see-more{
@@ -149,9 +147,11 @@
 			background-color: white;
     	}
     	p{
+		font-size: 15px;
+		font-weight: 900;
     	margin:0px;
-    	padding-bottom: 10px;
-    	padding-top: 10px;
+    	padding-bottom: 30px;
+    	padding-top: 30px;
     	}
 	}
 }
