@@ -1,8 +1,10 @@
 *{
-  font-family: 'Source Sans Pro', sans-serif; 
+  font-family: 'Avenir', sans-serif; 
   font-weight:200;
 }
-
+.site-color{
+	background-color: #f2f2f2;
+}
 .top-section{
 	width: 100%;
 	background-image: url("http://res.cloudinary.com/grubhub-marketing/image/upload/v1460472623/Marketing%20assets/2016-MarchSeasonal-Desktop-1200by550px-GH.jpg") ;
@@ -50,8 +52,7 @@
 	z-index: 100;
 	// position: fixed;
 	width: 100%;
-	// background-color: white;
-	// border-bottom: 1px solid black;
+	background-color: white;
 
 	.logo-title{
 		top: 5px;
@@ -90,27 +91,57 @@
 }
 
 #product-index{
+	
   .grid-item{
-  	margin: 10px 35px;
-	  span{
-	    position: absolute;
-	    bottom: 110px;
-	    text-align: center;
-	    width: 100%;
-	  }
+		background-color: white;
+		display: inline-block;
+		margin: 30px 15px;
 	}
-	.product-image{
-		border-radius: 10px;
-		&:hover{
-			opacity: .5;
-		}
-	}
+
 	.preview-pane{
-		background-color: black;
-		height: inherit;
-		img{
-			width: 100%;
+		// height: 200px;
+		background-size: cover; 
+		td{
+			border:none;
+			text-align: center;
 		}
+	}
+	.bottom-pane{
+	// overflow-y: scroll;
+ //    position: absolute;
+ //    height: 100%;
+	}
+	.headline-name{
+		font-size: 1.25em;
+		font-weight: 900;
+	}
+	.preview-info{
+		padding-top: 40px;
+		color:white;
+		.table-pane{
+			padding-top: 100px;
+		}
+		table{
+			margin-bottom: 0px;
+		}
+		.white{
+			opacity: .7;
+			padding: 0px;
+		}
+		td{
+			padding-top: 0px;
+			font-weight: bold;
+		}
+	}
+	.popup-wrapper{
+		// display: none;
+		position: absolute;
+    	bottom: 0;
+    	width: 100%;
+    	p{
+    	margin:0px;
+    	margin-top: 10px;
+    	}
 	}
 }
 

@@ -1,42 +1,56 @@
-<div id="product-index" class="container-fluid">
+<div id="product-index" ng-controller="ProductController as prod">
+
+<div class="preview-pane" style="background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url(http://foodporndaily.com/pictures/succulent-cajun-spiced-grilled-chicken-legs.jpg) center ">
+  <div class="container-fluid preview-info">
   <div class="row">
-    <div class="col-md-3 preview-pane">
-        <center style="color: white" ng-app="flapperNews" ng-controller="MainCtrl">{{test}}</center>
-        <img src="/assets/grubhub">
+    <div class="col-md-offset-4 col-md-4">
+      <center class="headline-name">{{name}}<center>
     </div>
-    <div class="col-md-8">
-      <h1>Mealkits</h1>
+  </div>
+  <div class="row table-pane">
+    <div class="col-md-offset-4 col-md-4">
+      <table style="width:100%">
+        <tr>
+          <td class="white">prep</td>
+          <td class="white">cook</td>    
+          <td class="white">feeds</td>
+          <td class="white">cost</td>    
+          <td class="white">cal.</td>
+        </tr>
+        <tr>
+          <td>{{prep}}</td>
+          <td>{{cook}}</td>    
+          <td>{{feeds}}</td>
+          <td>{{price | currency}}</td>    
+          <td>{{cal}}</td>
+        </tr>
+    </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="bottom-pane" class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-md-10 col-md-offset-1">
       <% @products.each do |category, products| %>
       <% products.each do |product| %>
-
-      <div style="display: inline-block" class="grid-item">
+      <div ng-click="myFunction($event)" id="<%=product.permalink %>" class="grid-item">
         <div style="position:relative">
-          <span> <%= number_to_currency product.price %> </span>
           <% if product.default_image %>
-          <%= link_to image_tag(product.default_image.path, :size => "200x200", :class=> "product-image"), product_path(product.permalink) %>
+          <%= image_tag(product.default_image.path, :size => "300x300", :class=> "product-image") %>
           <% end %>
           <p><%= product.name %></p>
-          <%= button_to "Add to basket", product_path(product.permalink), :method => :post %>
+          <div class="popup-wrapper">
+            <p> <%= link_to 'see more', product_path(product.permalink) %> </p>
+            <p> <%= link_to "Add #{product.name} box", product_path(product.permalink), :method => :post %> </p>
+          </div>
+        <!--   <%= button_to "Add to basket", product_path(product.permalink), :method => :post %> -->
         </div>
       </div>
       <% end %>
       <% end %>
     </div>
   </div>
+  </div>
 </div>
-<button id='test'></button>
-
-<script>
-$('#test').click(function(){
-  $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: "/product/yaki-linguine",
-        success: function(data){
-          console.log(data)
-        }
-    }); 
-} )
-
-
-</script>

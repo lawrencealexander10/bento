@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+@font-face {
+font-family: 'glyphicons';
+src: url(font-path('glyphicons-halflings-regular.eot'));
+src: url(font-path('glyphicons-halflings-regular.woff2')) format('woff2'),
+       url(font-path('glyphicons-halflings-regular.woff')) format('woff'),
+       url(font-path('glyphicons-halflings-regular.ttf')) format('truetype'),
+       url(font-path('glyphicons-halflings-regular.svg')) format('svg');
+font-weight: normal;
+font-style: normal;
+}
