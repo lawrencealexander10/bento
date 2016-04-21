@@ -1,0 +1,25 @@
+I"Â(function() {
+  $(function() {
+    return $('form.stripeForm').on('submit', function() {
+      var form, stripeCardParams;
+      form = $(this);
+      stripeCardParams = {};
+      $.each(['number', 'exp-month', 'exp-year', 'cvc', 'name', 'address_line1', 'address_line2', 'address_city', 'address_state', 'address_zip', 'address_country'], function(i, f) {
+        return stripeCardParams[f] = $("[data-stripe='" + f + "']").val();
+      });
+      Stripe.card.createToken(stripeCardParams, function(status, response) {
+        if (response.error) {
+          $('p.stripeError', form).remove();
+          $("<p class='stripeError'>" + response.error.message + "</p>").prependTo(form);
+          return $('input[type=submit]', form).removeClass('disabled').prop('disabled', false);
+        } else {
+          $('[data-stripe=token]').val(response['id']);
+          return form.get(0).submit();
+        }
+      });
+      return false;
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,133 @@
+*{
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-weight:200;
+}
+
+.top-section{
+	width: 100%;
+	background-image: url("http://res.cloudinary.com/grubhub-marketing/image/upload/v1460472623/Marketing%20assets/2016-MarchSeasonal-Desktop-1200by550px-GH.jpg") ;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	// position: absolute;
+	
+	h2{
+		margin-bottom: 15px;
+		padding-top: 25%;
+	}
+
+	p{
+		text-align: left; 
+		color: white; 
+		font-weight:400;
+		margin-bottom: 10px;
+	}
+
+	select{
+		display: inline;
+		text-align: center;
+		width: 400px;
+	}
+
+	form{
+		display: inline;
+	}
+
+	input{
+		
+	}
+
+	.homepage-center-text{
+		text-align: left;
+		color: white;
+		// font-size: 2em;
+		font-weight: bold;
+		vertical-align: middle;
+	}
+}
+
+
+.wrap-nav{
+	z-index: 100;
+	// position: fixed;
+	width: 100%;
+	// background-color: white;
+	// border-bottom: 1px solid black;
+
+	.logo-title{
+		top: 5px;
+    	position: relative;
+		color: #61dff0;
+		font-weight: 600;
+		font-family: 'Avenir', sans-serif;
+		font-size: 30px;
+		text-decoration: none;
+	}
+
+	.mainNavCart-itemQty{
+	    line-height: 20px;
+	    font-size: 13px;
+	    width: 20px;
+	    height: 20px;
+	    position: absolute;
+	    text-align: center;
+	    // background-color: #FFCE64;
+	    background-color: #f63440;
+	    color: #fff;
+	    border-radius: 20px;
+	    bottom: 5px;
+	    left: 35px;
+  	}
+
+  	.cart{
+  		padding-top: 5px;
+  	}
+}
+
+#product-show{
+  .tier{
+  	font-size: 1.5em;
+  }
+}
+
+#product-index{
+  .grid-item{
+  	margin: 10px 35px;
+	  span{
+	    position: absolute;
+	    bottom: 110px;
+	    text-align: center;
+	    width: 100%;
+	  }
+	}
+	.product-image{
+		border-radius: 10px;
+		&:hover{
+			opacity: .5;
+		}
+	}
+	.preview-pane{
+		background-color: black;
+		height: inherit;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+#checkout-table{
+	border:0;
+	tr{
+		border: 0;
+	}
+	td{
+		border-left: 0;
+		border-right: 0;
+	}
+}
+
+.group-buttons{
+	form{
+		display: inline;
+		margin-right: 5px;
+	}
+}
