@@ -134,13 +134,24 @@
 		}
 	}
 	.popup-wrapper{
-		// display: none;
 		position: absolute;
     	bottom: 0;
     	width: 100%;
+    	a{
+    		color: white;
+    		font-weight: bold;
+    		text-decoration: none;
+    	}
+    	.see-more{
+			background-color: #61dff0;
+    	}
+    	.add-to{
+			background-color: white;
+    	}
     	p{
     	margin:0px;
-    	margin-top: 10px;
+    	padding-bottom: 10px;
+    	padding-top: 10px;
     	}
 	}
 }

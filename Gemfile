@@ -33,6 +33,9 @@ gem 'shoppe-notification'
 gem "shoppe-stripe", require: "shoppe/stripe"
 #angularjs
 gem 'angularjs-rails'
+#images
+# gem 'carrierwave'
+# gem "fog-aws"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
