@@ -12,18 +12,6 @@ app.controller('ProductController', function($scope, $http) {
 	    });
 	}
 
-	// $scope.tab = 1;
-
- //        $scope.setTab = function (tabId) {
- //            $scope.tab = tabId;
- //            console.log('hey');
- //        };
-
- //        $scope.isSet = function (tabId) {
- //            return $scope.tab === tabId;
- //            console.log('to');
- //        };
-
 });
 
     app.controller('TabController', function () {
