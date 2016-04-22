@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require shoppe/stripe/form_handler
 //= require angular
 //= require_tree .
