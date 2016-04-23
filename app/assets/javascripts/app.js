@@ -4,13 +4,13 @@ var app = angular.module('bento', []);
 app.controller('ProductController', function($scope, $http) {
 	
     $scope.name = 'Yaki Linguine'
-    $scope.prep = '20m';
-    $scope.cook = '10m';
-    $scope.feeds = '2';
-    $scope.price = 16;
-    $scope.cal = 235;
+    $scope.prep = '10m';
+    $scope.cook = '15m';
+    $scope.feeds = 'two';
+    $scope.price = 20;
+    $scope.cal = 455;
     // $scope.image = ;
-    
+
 	$scope.myFunction = function(permalink){
 	    $http.get('/product/'+ permalink.currentTarget.id +'.json')
 	    .then(function(response) {
