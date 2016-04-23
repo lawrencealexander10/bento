@@ -9,8 +9,8 @@
     <dt><%= label_tag 'card_number' %></dt>
     <dd><%= text_field_tag 'card_number', nil, name: nil, "data-stripe" => "number" %></dd>
     <dt><%= label_tag 'expiry_month' %></dt>
-    <dd style="display: inline"><%= text_field_tag 'expiry_month', nil, name: nil, "data-stripe" => "exp-month"%></dd>
-    <dd style="display: inline"><%= text_field_tag 'expiry_year', nil, name: nil, "data-stripe" => "exp-year" %></dd>
+    <dd style="display: inline"><%= select_month nil, {add_month_numbers_true: true}, "data-stripe" => "exp-month"%></dd>
+    <dd style="display: inline"><%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, "data-stripe" => "exp-year" %></dd>
     <dt><%= label_tag 'security_code' %></dt>
     <dd><%= text_field_tag 'security_code', nil, name: nil, "data-stripe" => "cvc" %></dd>
   </dl>

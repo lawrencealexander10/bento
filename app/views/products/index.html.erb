@@ -1,6 +1,6 @@
 <div id="product-index" ng-controller="ProductController as prod">
 
-<div class="preview-pane" style="background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url(http://foodporndaily.com/pictures/succulent-cajun-spiced-grilled-chicken-legs.jpg) center ">
+<div id="preview-pane" class="preview-pane" style="background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url(http://foodporndaily.com/pictures/succulent-cajun-spiced-grilled-chicken-legs.jpg) center ">
   <div class="container-fluid preview-info">
   <div class="row">
     <div class="col-md-offset-4 col-md-4">
@@ -16,6 +16,7 @@
           <td class="white">feeds</td>
           <td class="white">cost</td>    
           <td class="white">cal.</td>
+          <td></td>
         </tr>
         <tr>
           <td>{{prep}}</td>
@@ -23,6 +24,7 @@
           <td>{{feeds}}</td>
           <td>{{price | currency}}</td>    
           <td>{{cal}}</td>
+          <td></td>
         </tr>
     </table>
     </div>
@@ -40,8 +42,8 @@
           <% if product.default_image %>
           <%= image_tag(product.default_image.path, :size => "300x300", :class=> "product-image") %>
           <% end %>
-          <p style="font-weight: 900"><%= product.name %></p>
-          <div ng-show="tab == <%=product.id%>" class="popup-wrapper">
+          <p class="<%=product.permalink %>" style="font-weight: 900"><%= product.name %></p>
+          <div ng-show="tab == <%=product.id%>" class="popup-wrapper <%=product.permalink %>">
             <p class="see-more"> <%= link_to 'see more', product_path(product.permalink) %> </p>
             <p class="add-to"> <%= link_to "Add #{product.name} box", product_path(product.permalink), :method => :post%> </p>
           </div>
@@ -53,3 +55,8 @@
   </div>
   </div>
 </div>
+<script>
+  $("#preview-pane").sticky({
+    topSpacing: 60
+  });
+</script>

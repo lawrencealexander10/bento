@@ -74,7 +74,7 @@ end
 		end    
 		rescue Shoppe::Errors::NotEnoughStock => e
 		respond_to do |wants|
-		  wants.html { redirect_to request.referer, :alert => "Unfortunately, we don't have enough stock. We only have #{e.available_stock} items available at the moment. Please get in touch though, we're always receiving new stock." }
+		  wants.html { redirect_to request.referer, :alert => "We're sorry but we don't have enough stock. Please try again." }
 		  wants.json { render :json => {:status => 'error', :message => "Unfortunateley, we don't have enough stock to add more items."} }
 		end
 	end

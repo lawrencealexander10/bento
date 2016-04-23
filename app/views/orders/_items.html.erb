@@ -1,4 +1,4 @@
-<table id="checkout-table" width='100%' border='1'>
+<table id="checkout-table" width='100%' border='1' style="background-color:white">
   <thead>
     <tr>
       <td>Quantity</td>
@@ -11,7 +11,7 @@
   <tbody>
     <% order.order_items.each do |item| %>
     <tr>
-      <td style="font-weight: 600">
+      <td style="font-weight: 200">
         <%= item.quantity %>
         <% unless defined?(readonly) %>
           <span>
@@ -34,7 +34,8 @@
 
     <% if order.delivery_service %>
       <tr class="delivery">
-        <td class="method" colspan="4">
+        <td>Choose date of Pickup:</td>
+        <td class="method" colspan="3">
           <% if defined?(readonly) %>
             <%= order.delivery_service.name %>
           <% else %>
