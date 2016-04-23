@@ -8,9 +8,10 @@ class ProductsController < ApplicationController
   def show
     @product = Shoppe::Product.root.find_by_permalink(params[:permalink])
     @product_attributes = Shoppe::ProductAttribute.where(product_id: @product.id)
+    @orders = Shoppe::Order.all
     respond_to do |format|
         format.html
-        format.json { render :json => {:product => @product, :attributes => @product_attributes}  }
+        format.json { render :json => {:product => @product, :attributes => @product_attributes, :order => @orders}  }
     end
   end
 

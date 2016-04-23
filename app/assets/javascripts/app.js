@@ -18,7 +18,7 @@ app.controller('ProductController', function($scope, $http) {
 	        $scope.price = response.data.product.price;
 	        $scope.image = permalink.target.currentSrc;
 	        for(var item in response.data.attributes){ $scope[response.data.attributes[item].key] = response.data.attributes[item].value}
-	        // console.dir($scope);
+	        console.dir($scope);
 	    });
 	}
 });
