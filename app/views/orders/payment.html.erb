@@ -10,7 +10,7 @@
     <dd><%= text_field_tag 'card_number', nil, name: nil, "data-stripe" => "number" %></dd>
     <dt><%= label_tag 'expiry_month', 'expiry month*', :style => "display:inline" %> <%= label_tag 'expiry_year', 'expiry year*', :style => "display:inline" %></dt>
     <dd><div style="display: inline; padding-right: 18px"><%= select_month nil, {add_month_numbers_true: true}, "data-stripe" => "exp-month"%></div><%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, "data-stripe" => "exp-year" %></dd>
-    <dt><%= label_tag 'security_code', ' security code ccv*' %></dt>
+    <dt><%= label_tag 'security_code', ' security code (three digits)*' %></dt>
     <dd><%= text_field_tag 'security_code', nil, name: nil, "data-stripe" => "cvc" %></dd>
   </dl>
   <%= submit_tag "pay with stripe" %>
