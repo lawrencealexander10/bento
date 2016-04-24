@@ -12,13 +12,14 @@ app.controller('ProductController', function($scope, $http) {
     $scope.image = 'https://bento-io-ireland.s3.amazonaws.com/attachment/5/IMG_3605.JPG';
 
 	$scope.myFunction = function(permalink){
+		// console.dir(permalink);
 	    $http.get('/product/'+ permalink.currentTarget.id +'.json')
 	    .then(function(response) {
 	        $scope.name = response.data.product.name;
 	        $scope.price = response.data.product.price;
 	        $scope.image = permalink.target.currentSrc;
 	        for(var item in response.data.attributes){ $scope[response.data.attributes[item].key] = response.data.attributes[item].value}
-	        console.dir(response.data);
+	        // console.dir(permalink);
 	    });
 	}
 });

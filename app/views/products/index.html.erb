@@ -39,9 +39,9 @@
     <div ng-init="tab=1; " class="col-md-10 col-md-offset-1">
       <% @products.each do |category, products| %>
       <% products.each do |product| %>
-      <div id="<%=product.permalink %>" class="grid-item">
+      <div class="grid-item">
         <div style="position:relative">
-          <div ng-click="myFunction($event); tab = <%=product.id%>">
+          <div ng-click="myFunction($event); tab = <%=product.id%>" id="<%=product.permalink %>" >
             <% if product.default_image %>
             <%= image_tag(product.default_image.path, :size => "300x300", :class=> "product-image") %>
             <% end %>
