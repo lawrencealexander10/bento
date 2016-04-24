@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   match 'checkout/delivery' => 'orders#change_delivery_service', :as => 'change_delivery_service', :via => [:post]
 
   get "/homepage/index" => 'homepage#index'
+  get "/iosapp/index" => 'iosapp#index'
   # The priority is based upon order of creation: fxirst created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
