@@ -8,10 +8,12 @@ class ProductsController < ApplicationController
   def show
     @product = Shoppe::Product.root.find_by_permalink(params[:permalink])
     @product_attributes = Shoppe::ProductAttribute.where(product_id: @product.id)
-    @orders = Shoppe::Order.all
+    @h= Shoppe::Order.where.not(accepted_at: nil).map do |u|
+       { :fname => u.first_name, :lname => u.last_name, :order => u.order_items.select("order_id, ordered_item_id, quantity")}
+    end
     respond_to do |format|
         format.html
-        format.json { render :json => {:product => @product, :attributes => @product_attributes, :order => @orders}  }
+        format.json { render :json => {:product => @product, :attributes => @product_attributes, :h => @h}  }
     end
   end
 
