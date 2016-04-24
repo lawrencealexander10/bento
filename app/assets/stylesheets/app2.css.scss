@@ -88,11 +88,21 @@
 }
 
 #product-index{
-	
+
+@media (max-width: 600px) {
+	.resize-index{
+		text-align: center;
+	}
+}
+
+	.resize-index{
+		// content: '';
+		// text-align: justify;
+	}
   .grid-item{
 		background-color: white;
 		display: inline-block;
-		margin: 30px 15px;
+		margin: 35px 15px;
 		p{
 			font-size: 15px;
 			padding:35px;
