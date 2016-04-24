@@ -1,15 +1,15 @@
 class OrdersController < ApplicationController
 
-	 before_filter(:except => :status) { redirect_to root_path unless has_order? }
+	 before_filter(:except => :status) { redirect_to products_path unless has_order? }
 
   def destroy
     current_order.destroy
     session[:order_id] = nil
     respond_to do |wants|
-      wants.html { redirect_to root_path, :notice => "Your basket has been emptied successfully."}
+      wants.html { redirect_to products_path, :notice => "Your basket has been emptied successfully."}
       wants.json do
         flash[:notice] = "Your shopping bag is now empty."
-        render :json => {:status => 'complete', :redirect => root_path}
+        render :json => {:status => 'complete', :redirect => products_path}
       end
     end
   end
@@ -38,7 +38,7 @@ end
 	  if request.post?
 	    current_order.confirm!
 	    session[:order_id] = nil
-	    redirect_to root_path, :notice => "Order has been placed successfully!"
+	    redirect_to products_path, :notice => "Order has been placed successfully!"
 	  end
 	end
 
@@ -62,7 +62,7 @@ end
 		item = current_order.order_items.find(params[:order_item_id])
 		request.delete? ? item.decrease! : item.increase!
 		respond_to do |wants|
-		  wants.html { redirect_to request.referer || root_path, :notice => "Quantity has been updated successfully." }
+		  wants.html { redirect_to request.referer || products_path, :notice => "Quantity has been updated successfully." }
 		  wants.json do
 		    current_order.reload
 		    if current_order.empty?

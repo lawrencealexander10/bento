@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   mount Shoppe::Engine => "/shoppe"
   get "product/:permalink", to: "products#show", as: "product"
   post "product/:permalink", to: "products#buy", as: "buy"
-  root to: "products#index"
+  root to: "homepage#index"
   post "product/:permalink", to: "products#buy"
+  get "/products" => 'products#index'
   get "basket", to: "orders#show"
   delete "basket", to: "orders#destroy"
   post 'basket/:order_item_id' => 'orders#change_item_quantity', :as => 'adjust_basket_item_quantity'

@@ -1,7 +1,7 @@
 <nav id="site-navigation" class="wrap-nav">
 	<div class="container">
 		<div class="row">
-			<%= link_to( 'bento', root_path, :class => 'logo-title' )  %> 
+			<%= link_to( 'bento', products_path, :class => 'logo-title' )  %> 
 			<div class="cart">
 			  <% if has_order? && current_order.has_items? %>
 			  		<%= link_to "box", basket_path, :class=> "basket"%>
