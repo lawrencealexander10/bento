@@ -41,10 +41,12 @@
       <% products.each do |product| %>
       <div id="<%=product.permalink %>" class="grid-item">
         <div style="position:relative">
-          <% if product.default_image %>
-          <%= image_tag(product.default_image.path, :size => "300x300", :class=> "product-image") %>
-          <% end %>
-          <p ng-click="myFunction($event); tab = <%=product.id%>" class="<%=product.permalink %>" style="font-weight: 900"><%= product.name %></p>
+          <div ng-click="myFunction($event); tab = <%=product.id%>">
+            <% if product.default_image %>
+            <%= image_tag(product.default_image.path, :size => "300x300", :class=> "product-image") %>
+            <% end %>
+         </div>
+          <p class="<%=product.permalink %>" style="font-weight: 900"><%= product.name %></p>
           <div ng-show="tab == <%=product.id%>" class="popup-wrapper <%=product.permalink %>">
             <p class="see-more"> <%= link_to 'see more', product_path(product.permalink) %> </p>
             <p class="add-to"> <%= link_to "Add #{product.name} box", product_path(product.permalink), :method => :post%> </p>
