@@ -109,27 +109,29 @@
 			border:none;
 			text-align: center;
 		}
-	}
-	.headline-name{
-		font-size: 25px;
-		font-weight: 900;
-		padding-top: 20px;
-	}
-	.preview-info{
-		color:white;
-		.table-pane{
-			padding-top: 36.25px;
-		}
-		table{
-			margin-bottom: 0px;
-		}
-		.white{
-			opacity: .7;
-			padding: 0px;
-		}
-		td{
-			padding-top: 0px;
+
+		.headline-name{
+			font-size: 25px;
 			font-weight: 900;
+			padding-top: 20px;
+		}
+		
+		.preview-info{
+			color:white;
+			.table-pane{
+				padding-top: 36.25px;
+			}
+			table{
+				margin-bottom: 0px;
+			}
+			.white{
+				opacity: .7;
+				padding: 0px;
+			}
+			td{
+				padding-top: 0px;
+				font-weight: 900;
+			}
 		}
 	}
 	.popup-wrapper{
@@ -181,4 +183,185 @@
 }
 #preview-pane-sticky-wrapper{
 	height:150px !important;
+}
+
+
+
+// for walden items
+
+	.preview-pane{
+		height: 150px;
+		background-size: cover; 
+		z-index: 2;
+		margin-bottom: 37.5px;
+		td{
+			border:none;
+			text-align: center;
+		}
+		
+		.headline-name{
+			font-size: 25px;
+			padding-top: 20px;
+			a{
+			color: white;
+			font-weight: 900;
+			text-decoration: none;
+			}
+		}
+		
+		.preview-info{
+			color:white;
+			.table-pane{
+				padding-top: 36.25px;
+				span{
+					a{
+						color: white;
+						font-weight: 900;
+					}
+				}
+			}
+			table{
+				margin-bottom: 0px;
+			}
+			.white{
+				opacity: .7;
+				padding: 0px;
+			}
+			td{
+				padding-top: 0px;
+				font-weight: 900;
+			}
+		}
+	}
+	.begin-checkout{
+		text-align: center;
+		a{
+			font-weight: 900;
+			padding: 25.5px;
+			display: block;
+			text-decoration: none;
+			&.checkout-link{
+				background-color: white;
+				color: #61dff0;
+			}
+			&.emptybox-link{
+				background-color: #cccccc;
+				color: white;
+			}
+		}
+		form{
+			margin: 0px;
+			width: 100%;
+			background-color: #61dff0;
+			padding: 18.5px;
+			select{
+				border: none;
+				background-color: #61dff0;
+				color: white;
+				font-weight: 900;
+			}
+		}
+		table{
+			background-color: #61dff0;
+			border: none;
+			margin: 0px;
+			td{
+				color: white;
+				font-weight: 900;
+				border: none;
+				padding-top:6.75px;
+				padding-bottom: 0px;
+				text-align: center;
+			}
+			tr{
+				color: white;
+				padding: 6.75px;
+				&.top{
+					opacity: .7;
+				}
+				text-align: center;
+				padding: 0px;
+			}
+		}
+	}
+
+
+#checkout-page{
+	.form-background{
+		background-color: white;
+	}
+	.field-padding{
+		margin: 37.5px;
+	}
+
+	.totals{
+		color: #cccccc;
+		font-weight: 900;
+		padding: 10px;
+		font-size: 15px;
+		span{
+			color: #61dff0;
+			display: block;
+			font-weight: 900;
+		}
+	}
+	form{
+		dd:last-child{
+			padding-bottom: 15px;
+		}
+		dt{
+			padding-top: 15px;
+			color: #cccccc;
+			label{
+				font-weight: 900;
+			}
+		}
+		input{
+			color: #61dff0;
+			font-weight: 900;
+			width: 100%;
+		}
+		select{
+			width: 100%;
+		}
+	}
+}
+#payment{
+	form{
+		background-color: white;
+		padding:15px;
+		color: #cccccc;
+		dt:first-child{
+			// padding-top: 15px;
+		}
+		label{
+			padding-right:20px;
+		}
+		dd{
+			margin-bottom: 15px;
+			color: #61dff0;
+			font-weight: 900;
+			select{
+				color: #61dff0;
+				font-weight: 900;
+			padding-right:20px;
+		}
+		}
+		input{
+			width: 100%;
+		}
+	}
+}
+.inherit-color{
+	form{
+	input{
+		background-color: #61dff0;
+		border: none;
+		color: white;
+	}
+	input:hover{
+		color:white;
+		font-family: 'Avenir';
+	}
+}
 }

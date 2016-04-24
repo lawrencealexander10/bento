@@ -1,0 +1,35 @@
+<% order.order_items.each do |item| %>
+<div class="preview-pane" style="background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url(http://foodporndaily.com/pictures/succulent-cajun-spiced-grilled-chicken-legs.jpg) center ">
+  <div class="container-fluid preview-info">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <center class="headline-name">
+        <%= item.ordered_item.full_name %>
+      <center>
+    </div>
+  </div>
+  <div class="row table-pane">
+    <div class="col-md-offset-4 col-md-4">
+      <table style="width:100%">
+        <tr>
+          <td class="white">quantity</td>
+          <td class="white">subtotal</td>    
+          <td class="white">tax</td>
+          <td class="white">total</td>    
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <%= item.quantity %>
+          </td>
+          <td><%= number_to_currency item.sub_total %></td>    
+          <td><%= number_to_currency item.tax_amount %></td>
+          <td><%= number_to_currency item.total %></td>    
+          <td></td>
+        </tr>
+    </table>
+    </div>
+  </div>
+</div>
+</div>
+<% end %>

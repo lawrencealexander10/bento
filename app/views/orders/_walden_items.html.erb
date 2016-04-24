@@ -1,0 +1,73 @@
+<% order.order_items.each do |item| %>
+<div class="preview-pane" style="background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url(http://foodporndaily.com/pictures/succulent-cajun-spiced-grilled-chicken-legs.jpg) center ">
+  <div class="container-fluid preview-info">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <center class="headline-name">
+        <%= link_to item.ordered_item.full_name, product_path(item.ordered_item.permalink) %>
+      <center>
+    </div>
+  </div>
+  <div class="row table-pane">
+    <div class="col-md-offset-4 col-md-4">
+      <table style="width:100%">
+        <tr>
+          <td class="white">quantity</td>
+          <td class="white">subtotal</td>    
+          <td class="white">tax</td>
+          <td class="white">total</td>    
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            
+            <% unless defined?(readonly) %>
+              <span>
+                <%= link_to "+", adjust_basket_item_quantity_path(item.id), :method => :post, :class => 'ajax' %>
+                <%= item.quantity %>
+                <%= link_to "-", adjust_basket_item_quantity_path(item.id), :method => :delete, :class => 'ajax' %>
+              </span>
+            <% end %>
+          </td>
+          <td><%= number_to_currency item.sub_total %></td>    
+          <td><%= number_to_currency item.tax_amount %></td>
+          <td><%= number_to_currency item.total %></td>    
+          <td></td>
+        </tr>
+    </table>
+    </div>
+  </div>
+</div>
+</div>
+<% end %>
+  <div class="container begin-checkout">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <% if order.delivery_service %>
+          <% if defined?(readonly) %>
+                  <%= order.delivery_service.name %>
+                <% else %>
+            <%= form_tag change_delivery_service_path do  %>
+                    <%= select_tag 'delivery_service', options_from_collection_for_select(order.available_delivery_services, :id, :name, order.delivery_service.id) %>
+                <% end %>
+             <% end %>
+             <% end %>
+        <div>
+          <table style="width:100%">
+            <tr class="top">
+              <td>subtotal</td>
+              <td>tax</td>
+              <td>total</td>
+            </tr>
+            <tr>
+              <td><%= number_to_currency order.total_before_tax %></td>
+              <td><%= number_to_currency order.tax %></td>
+              <td> <%= number_to_currency order.total %></td>
+            </tr>
+          </table>
+        </div>
+        <%= link_to "checkout", checkout_path, :method => :get, :class => "checkout-link"%>
+        <%= link_to 'empty box', basket_path, :method => :delete, :class => "emptybox-link"%>
+      </div>
+    </div>
+  </div>

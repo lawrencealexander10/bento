@@ -1,11 +1,3 @@
-<div class="container">
-	<div class="row">
-	<div style="color: gray; font-size: 25px; padding-bottom: 20px;" class="col-md-12">Shopping Cart</div>
-	</div>
-	<%= render 'items', :order => current_order %>
-	<div class="group-buttons">
-		<%= button_to 'Empty basket', basket_path, :method => :delete %>
-		<%= button_to( 'Continue Shopping', root_path)  %> 
-		<%= button_to "Checkout", checkout_path, :method => :get, :style => "float: right"  %>
-	</div>
+<div id="checkout-walden">
+	<%= render 'walden_items', :order => current_order %>
 </div>
