@@ -1,6 +1,7 @@
 <div id="product-index" ng-controller="ProductController as prod">
 
-<div id="preview-pane" class="preview-pane" style="background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url(http://foodporndaily.com/pictures/succulent-cajun-spiced-grilled-chicken-legs.jpg) center ">
+<div id="preview-pane" style="z-index: 2">
+<div class="preview-pane" style="background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url({{image}}) center ">
   <div class="container-fluid preview-info">
   <div class="row">
     <div class="col-md-offset-4 col-md-4">
@@ -29,6 +30,7 @@
     </table>
     </div>
   </div>
+</div>
 </div>
 </div>
 

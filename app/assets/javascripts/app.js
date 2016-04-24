@@ -9,7 +9,7 @@ app.controller('ProductController', function($scope, $http) {
     $scope.feeds = 'two';
     $scope.price = 20;
     $scope.cal = 455;
-    // $scope.image = ;
+    $scope.image = 'https://bento-io-ireland.s3.amazonaws.com/attachment/5/IMG_3605.JPG';
 
 	$scope.myFunction = function(permalink){
 	    $http.get('/product/'+ permalink.currentTarget.id +'.json')
