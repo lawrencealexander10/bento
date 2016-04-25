@@ -7,7 +7,7 @@ app.controller('ProductController', function($scope, $http) {
     $scope.prep = '10m';
     $scope.cook = '15m';
     $scope.feeds = 'four';
-    $scope.price = 20;
+    $scope.price = 16;
     $scope.cal = 455;
     $scope.image = 'https://bento-io-ireland.s3.amazonaws.com/attachment/5/IMG_3605.JPG';
 
