@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root to: "homepage#index"
   root to: "products#index"
   post "product/:permalink", to: "products#buy"
-  # get "/products" => 'products#index'
+  get "/products" => 'products#index'
   get "basket", to: "orders#show"
   delete "basket", to: "orders#destroy"
   post 'basket/:order_item_id' => 'orders#change_item_quantity', :as => 'adjust_basket_item_quantity'
