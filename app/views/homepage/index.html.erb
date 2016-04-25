@@ -1,16 +1,22 @@
 <div id="homepage" class="">
 	<div class="top-section">
 		<div class="container-fluid">
-			<div style="min-height: 450px;"class="row">
-				<div class="col-sm-offset-3 col-md-8">
-					<h2 class="homepage-center-text">Who delivers in your neighborhood?</h2>
-					<p style="">You do. Pickup in your neighborhood.</p>
-					<select style="">
+			<div style="min-height: 550px;"class="row">
+<!-- 				<div class="col-sm-2 left-side">
+					.
+				</div> -->
+
+				<div style="min-height: 590px;" class=" col-md-12 homepage-center-text middle-side">
+					<h2 style="font-size:35px">skip the grocery list</h2>
+					<p style="font-size:15px; text-align:center">cook dinner with a bento box, full of fresh, all-natural ingredients from elm city market</p>
+<!-- 					<select style="">
 					  <option value="1">Elm City Market, New Haven, CT</option>
-					</select>
-					<%= button_to( 'bento', products_path, :method => :get, :class => 'logo-title', :style => "background-color: #61dff0; color:white; border: none " )  %> 
+					</select> -->
+					<%= button_to( "today's bento boxes", products_path, :method => :get, :class => 'logo-title', :style => "background-color: #61dff0; color:white; border: none " )  %> 
 				</div>
-			</div>
+				</div>
+<!-- 				<div class="col-sm-2 right-side">.</div>
+ -->
 		</div>
 	</div>
 
@@ -18,9 +24,11 @@
 		<div style="color: black" class="container-fluid">
 			<div class="row">
 				<div style="text-align: center; font-size: 2em; font-weight: 300; padding-top: 20px;" class="col-sm-offset-3 col-sm-6">
-					<p style="margin-bottom: 0px; font-weight: 300">Who are we?</p>
-					<span style="font-size: .75em; ">Ordering from your favorite restaurant is even easier than eating.<span>
+<!-- 					<p style="margin-bottom: 0px; font-weight: 300">Who are we?</p>
+					<span style="font-size: .75em; ">Ordering from your favorite restaurant is even easier than eating.<span> -->
+						<%if false %>
 					<%= render :partial => '/shared/mailchimp'%>
+					<%end%>
 				</div>
 			</div>
 		</div>

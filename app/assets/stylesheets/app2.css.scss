@@ -7,19 +7,36 @@
 }
 .top-section{
 	width: 100%;
-	background-image: url("http://res.cloudinary.com/grubhub-marketing/image/upload/v1460472623/Marketing%20assets/2016-MarchSeasonal-Desktop-1200by550px-GH.jpg") ;
-	background-repeat: no-repeat;
-	background-size: 100%;
+	// background-image: url("http://res.cloudinary.com/grubhub-marketing/image/upload/v1460472623/Marketing%20assets/2016-MarchSeasonal-Desktop-1200by550px-GH.jpg") ;
+	// background-repeat: no-repeat;
+	// background-size: 100%;
 	
+	.middle-side{
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                rgba(0,0,0,0.55) url("https://s3-eu-west-1.amazonaws.com/bento-io-ireland/attachment/10/shrimp_john.jpg") ;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	padding: 0px;
+}
+
+@media (max-width: 600px) {
+	.middle-side{
+		background-size: auto 100%;
+	}
+}
+
 	h2{
 		margin-bottom: 15px;
-		padding-top: 25%;
+		padding-top: 15%;
+		font-weight: 900;
 	}
 
 	p{
 		text-align: left; 
 		color: white; 
 		margin-bottom: 10px;
+		font-weight: 900;
 	}
 
 	select{
@@ -37,9 +54,10 @@
 	}
 
 	.homepage-center-text{
-		text-align: left;
+		font-family: 'Avenir';
+		text-align: center;
 		color: white;
-		font-weight: bold;
+		font-weight: 900;
 		vertical-align: middle;
 	}
 }
