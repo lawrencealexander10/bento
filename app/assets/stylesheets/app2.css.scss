@@ -432,11 +432,14 @@
 }
 }
 .footer{
+	height: 37.5px;
+	margin: auto;
+	padding-top: 9.75px;
     position: fixed;
     font-weight: 900;
-    background-color: #61dff0;
+    background-color: white;
     width: 100%;
     bottom: 0;
     text-align: center;
-    color: white;
+    color: #61dff0;
 }
