@@ -11,7 +11,7 @@
 			<h2><%= @product.name %></h2>
 			<h1><%= number_to_currency @product.price %></h1> 
 			<%= simple_format @product.description %>
-			<%= button_to "Add to basket", product_path(@product.permalink), :method => :post, :style => "float: right;" %>
+			<%= button_to "Add to box", product_path(@product.permalink), :method => :post, :style => "float: right;" %>
 		</div>
 	</div>
 </div>
