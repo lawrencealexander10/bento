@@ -49,7 +49,11 @@
                   <%= order.delivery_service.name %>
                 <% else %>
             <%= form_tag change_delivery_service_path do  %>
-                    <%= select_tag 'delivery_service', options_from_collection_for_select(order.available_delivery_services, :id, :name, order.delivery_service.id) %>
+                    <% if Time.now.hour <= 15 %>
+              <%= select_tag 'delivery_service', options_from_collection_for_select(order.available_delivery_services, :id, :name, order.delivery_service.id) %>
+              <% else %>
+              <%= select_tag 'delivery_service', options_from_collection_for_select(Shoppe::DeliveryService.where.not(id: 1), :id, :name, order.delivery_service.id) %>
+            <% end %>
                 <% end %>
              <% end %>
              <% end %>

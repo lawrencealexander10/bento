@@ -40,7 +40,10 @@
             <%= order.delivery_service.name %>
           <% else %>
             <%= form_tag change_delivery_service_path do  %>
+              <% if Time.now.hour <= 15 %>
               <%= select_tag 'delivery_service', options_from_collection_for_select(order.available_delivery_services, :id, :name, order.delivery_service.id) %>
+              <% else %>
+              <%= select_tag 'delivery_service', options_from_collection_for_select(order.available_delivery_services[1], :id, :name, order.delivery_service.id) %>
             <% end %>
           <% end %>
         </td>

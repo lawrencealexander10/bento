@@ -50,7 +50,7 @@
           <p class="<%=product.permalink %>" style="font-weight: 900"><%= product.name %></p>
           <div ng-show="tab == <%=product.id%>" class="popup-wrapper <%=product.permalink %>">
             <p class="see-more"> <%= link_to 'see more', product_path(product.permalink) %> </p>
-            <p class="add-to"> <%= link_to "Add #{product.name} box", product_path(product.permalink), :method => :post%> </p>
+            <p class="add-to"> <%= link_to "add #{product.name} box", product_path(product.permalink), :method => :post%> </p>
           </div>
         </div>
       </div>
