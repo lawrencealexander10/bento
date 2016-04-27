@@ -11,7 +11,7 @@
                 <dd><%= f.text_field :email_address, :required => true  %></dd>
 
                 <dt><%= f.label :phone_number, 'phone number*' %></dt>
-                <dd><%= f.text_field :phone_number, :required => true  %></dd>
+                <dd><%= f.text_field :phone_number, :required => true, :maxlength =>10  %></dd>
             </dl>
                 <dl class="field-padding col-md-3  form-background">
                 <dt><%= f.label :billing_address1, 'billing address*' %></dt>
