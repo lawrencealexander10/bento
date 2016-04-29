@@ -3,14 +3,14 @@
                 rgba(0,0,0,0.55) url(<%=item.ordered_item.default_image.path%>) center no-repeat">
   <div class="container-fluid preview-info">
   <div class="row">
-    <div class="col-sm-offset-4 col-sm-4">
+    <div class="col-xs-offset-4 col-xs-4">
       <center class="headline-name">
         <%= link_to item.ordered_item.full_name, product_path(item.ordered_item.permalink) %>
       <center>
     </div>
   </div>
   <div class="row table-pane">
-    <div class="col-sm-offset-4 col-sm-4">
+    <div class="col-xs-offset-4 col-xs-4">
       <table style="width:100%">
         <tr>
           <td class="white">quantity</td>
@@ -43,7 +43,7 @@
 <% end %>
   <div class="container begin-checkout">
     <div class="row">
-      <div class="col-sm-offset-4 col-sm-4">
+      <div class="col-xs-offset-4 col-xs-4">
         <% if order.delivery_service %>
           <% if defined?(readonly) %>
                   <%= order.delivery_service.name %>
