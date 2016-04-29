@@ -1,12 +1,12 @@
 
 <div style="margin-top: 40px;"id="product-show" class="container-fluid">
 	<div class="row">
-		<div class="col-xs-offset-1 col-xs-6">
+		<div class="col-sm-offset-1 col-sm-6">
 			<% if @product.default_image %>
 		  		<%= image_tag @product.default_image.path, :style => "margin: auto; display: block; max-width: 450px" %>
 			<% end %>
 		</div>
-		<div class="col-xs-4">
+		<div class="col-sm-4">
 
 			<h2><%= @product.name %></h2>
 			<h1><%= number_to_currency @product.price %></h1> 

@@ -1,7 +1,7 @@
 <div id="checkout-page" class="container">
     <div class="row">
         <%= form_for @order, :url => checkout_path do |f| %>
-            <dl class=" field-padding  col-xs-3 form-background">
+            <dl class=" field-padding  col-sm-3 form-background">
                 <dt><%= f.label :first_name, 'first name*' %></dt>
                 <dd><%= f.text_field :first_name, :required => true %></dd> 
 
@@ -13,7 +13,7 @@
                 <dt><%= f.label :phone_number, 'phone number*' %></dt>
                 <dd><%= f.text_field :phone_number, :required => true, :maxlength =>10  %></dd>
             </dl>
-                <dl class="field-padding col-xs-3  form-background">
+                <dl class="field-padding col-sm-3  form-background">
                 <dt><%= f.label :billing_address1, 'billing address*' %></dt>
                 <dd><%= f.text_field :billing_address1, :required => true  %></dd>
                 <dt><%= f.label :billing_address2, 'billing address 2 (optional)' %></dt>
@@ -28,7 +28,7 @@
                 <dd><%= f.collection_select :billing_country_id, Shoppe::Country.ordered, :id, :name, :include_blank => true, :required => true  %></dd>
                 <dd>
             </dl>
-          <div class=" field-padding col-xs-3 form-background">  
+          <div class=" field-padding col-sm-3 form-background">  
             <div class="totals">
             subtotal
             <span>
