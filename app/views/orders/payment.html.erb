@@ -1,7 +1,7 @@
 <div id="payment" class="container">
 <%= shoppe_stripe_javascript %>
   <div class="row">
-    <div style="background-color: white; margin-top: 15px;"class="col-md-offset-4 col-md-4">
+    <div style="background-color: white; margin-top: 15px;"class="col-sm-offset-4 col-sm-4">
       <img style="display:block; margin: auto; padding-top: 15px;" src="<%= asset_path( 'solid.png' ) %>" />
       <%= form_tag nil, class: "stripeForm" do %>
   <%= hidden_field_tag "stripe_token", nil, "data-stripe" => "token" %>
